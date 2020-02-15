@@ -1,6 +1,6 @@
 // My notes from reading the Rust Book 2018
 //
-//use std::io;
+////use std::io;
 
 #[derive(Debug)] // Needed to see output from println!()
 struct Router {
