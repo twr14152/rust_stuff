@@ -1,5 +1,5 @@
 // My notes from reading the Rust Book 2018
-//
+// Reread Chapter on enums
 ////use std::io;
 
 #[derive(Debug)] // Needed to see output from println!()
@@ -32,7 +32,14 @@ impl Rectangle {
     }
 }
 
-
+//Enum
+//This is a rather lack luster example of this feature
+//This ones on me
+#[derive(Debug)]
+enum Books {
+    Pbook(String),
+    Ebook(String),
+}
 fn main() {
     println!("Hello world!");
     println!("Testing another_function(5)");
@@ -214,6 +221,12 @@ fn main() {
     println!("******************************");
     println!("Topic enum                    ");
     println!("******************************");
+    let rust_book = Books::Pbook(String::from("The Rust Book"));
+    let rust_e_book = Books::Ebook(String::from("The Rust e-Book"));
+    println!("{:?}", rust_book);
+    println!("{:?}", rust_e_book);
+    let tgpl = Books::Pbook(String::from("The Go Programming Language"));
+    println!("Very boring book {:?}",(tgpl));
 
 
 }
