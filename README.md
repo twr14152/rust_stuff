@@ -6,4 +6,4 @@ Reading "The Book", on the website. So far, so good, and then I reached the chap
 Time for a break!
 
 
-rust_notes.rs - Is a way for me to test concepts covered in the book by creating a long program, rather than a bunch of short ones. Sometimes its a stretch to say its a good way to prove a concept.
+rust_notes.rs - Is a way for me to test concepts covered in the book by creating one long program, rather than a bunch of short ones. May not be the most well thought out plan.
