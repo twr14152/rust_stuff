@@ -7,3 +7,6 @@ Time for a break!
 
 
 rust_notes.rs - Is a way for me to test concepts covered in the book by creating one long program, rather than a bunch of short ones. May not be the most well thought out plan.
+Fact! - this was a bad idea. Too much searching involved. 
+
+Short programs easy to understand programs going forward.
