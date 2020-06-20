@@ -1,5 +1,5 @@
 fn main() {
-    // Fizz-buzz-like-thingy
+    // Fizz-buzz-thingy
     for num in 1..20 {
         if num % 3 == 0 && num % 5 == 0 {
             println!("fizz buzz");
@@ -22,5 +22,16 @@ fn main() {
         } else {
             println!("{}", num);
         }
-}
+    }
+    println!("***************************");
+    println!("If condition is True - issue body of clause");
+    let number = 2;
+
+    if number == 5 {
+        println!("Number is 5");
+    } else if number == 10 {
+        println!("Number is 10");
+    } else {
+        println!("Number was {}", number);
+    }
 }
