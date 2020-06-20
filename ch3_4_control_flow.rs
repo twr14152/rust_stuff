@@ -34,4 +34,9 @@ fn main() {
     } else {
         println!("Number was {}", number);
     }
+    println!("**************************");
+    let condition = false; // if true == 10 if false == 6
+    let nums = if condition { 10 } else { 6 };
+    println!("The valuse of number is: {}", nums)
 }
+
