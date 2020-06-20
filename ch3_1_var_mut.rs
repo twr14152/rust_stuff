@@ -1,5 +1,5 @@
 // Var assignment and mutability
-fn main() {
+fn main() { 
     let x = 5;
     println!("The value of x is: {}. By default its immutable.", x);
     println!("
