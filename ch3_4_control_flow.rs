@@ -37,6 +37,29 @@ fn main() {
     println!("**************************");
     let condition = false; // if true == 10 if false == 6
     let nums = if condition { 10 } else { 6 };
-    println!("The value of number is: {}", nums)
+    println!("The value of number is: {}", nums);
+    println!("**********LOOP************");
+    let mut counter = 0;
+    let result = loop {
+        counter += 2;
+
+        if counter == 100 {
+            break counter * 2
+        }
+    };
+    println!("Break counter number is {}", result);
+    println!("*********While***********");
+    let mut numbers = 10;
+    while numbers != 0 {
+        println!("{}", numbers);
+        numbers -= 1;
+    }
+    println!("LIFTOFF!!!");
+    println!("**********FOR************");
+    for i in (1..11).rev() {
+        println!("{}", i);
+        }
+    println!("Blast off!!!");
 }
+
 
