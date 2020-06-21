@@ -28,16 +28,22 @@ fn secondary() {
     // The closing '}' tells Rust to call the drop function
     let mut t = String::from("hello"); // allocated on heap - think restaurant seating
     t.push_str(", world!"); //appends a literal to the String
-    println!("{}", t)
+    println!("{}", t); 
 
     //copying vars - copy of the variable in the stack
     let x = 5;
     let y = x;
-    println!("{} {}",x,y);
+    println!("{} {}", x, y);
     //You dont copy data in the heap memory you copy the pointer to that data
     //along with the Name Length and Capacity
     let s1 = String::from("Some where in memory");
-    let s2 = s1; 
-    println!("{} {}", s1, s2)
+    let s2 = s1.clone(); // without the .clone() a move (shallow copy) 
+    // without the .clone() s1 data will have moved to s2 leaving s1 in error state
+    // with this print statement. Only s2 would be valid
+    // deep copy solves this.
+    println!("original: {}\ncopy: {}", s1, s2); 
+    //Summary stack only data is a copy 
+    //To copy heap data use .clone() method
+
 }
 
