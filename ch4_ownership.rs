@@ -35,15 +35,36 @@ fn secondary() {
     let y = x;
     println!("{} {}", x, y);
     //You dont copy data in the heap memory you copy the pointer to that data
-    //along with the Name Length and Capacity
+    //along with the Name,  Length, and Capacity
     let s1 = String::from("Some where in memory");
     let s2 = s1.clone(); // without the .clone() a move (shallow copy) 
     // without the .clone() s1 data will have moved to s2 leaving s1 in error state
     // with this print statement. Only s2 would be valid
-    // deep copy solves this.
+    // deep copy '.clone()' solves this.
     println!("original: {}\ncopy: {}", s1, s2); 
-    //Summary stack only data is a copy 
-    //To copy heap data use .clone() method
+    //Summary stack only data can simply do a copy
+    //Types that are of known size at time of compile can simply 'let y = x;'
+    //To copy heap data must do a deep copy using .clone() method
+    //
+    //
+    //All ints, bools, floats, char, tuples have copy trait. 'let y = x'
+    //
 
-}
+    let s3 = String::from("String data for take_ownership"); // s3 comes into scope
+    takes_ownership(s3); //s3 value moves into function 
+                         //and is no longer valid here!
+
+    let s4 = 5; // s4 comes into scope
+    make_copy(s4); //s4 is i32 type and is a Copy in function
+                   //s4 can still be used as its still in scope
+    
+} //s4 goes out of scope
+
+fn takes_ownership(some_string: String) { //a string comes into scope
+    println!("{}", some_string);
+} // here the string goes out of scope and 'drop' is called memory is freed
+
+fn make_copy(some_integer: i32) { //an integer comes into scope
+    println!("{}", some_integer);
+} // integer goes out of scope nothing special is called
 
