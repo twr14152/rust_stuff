@@ -58,6 +58,8 @@ fn secondary() {
     make_copy(s4); //s4 is i32 type and is a Copy in function
                    //s4 can still be used as its still in scope
     
+    last_example()
+    
 } //s4 goes out of scope
 
 fn takes_ownership(some_string: String) { //a string comes into scope
@@ -68,3 +70,25 @@ fn make_copy(some_integer: i32) { //an integer comes into scope
     println!("{}", some_integer);
 } // integer goes out of scope nothing special is called
 
+
+fn last_example() {
+    let s5 = String::from("Hello");
+    let (s6, len) = calculate_length(s5);
+
+    println!("The length of '{}' is {}.", s6, len);
+}
+
+fn calculate_length(s: String) -> (String, usize) {
+    let length = s.len(); 
+    (s, length)
+}
+/*
+good bye!
+hello, world!
+5 5
+original: Some where in memory
+copy: Some where in memory
+String data for take_ownership
+5
+The length of 'Hello' is 5.
+*/
